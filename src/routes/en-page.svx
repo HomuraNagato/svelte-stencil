@@ -1,0 +1,17 @@
+
+---
+title: Welcome!
+date: 2024-08-19
+summary: welcome
+---
+
+# {title}
+
+ - basic page with tailwindcss, daisyui, and smui components; along with mdsvex 
+   for md pages next to svelte pages
+ - <p class="underline text-green-700 md:text-red-700">size dependent
+   tailwindcss color; increase/decrease the size of this page to view effect</p>
+ - <p class="text-caffe-purple">language store makes text dynamic to
+   selected language</p>
+ - daisyui for themes
+ - accessibility features: navigate by keyboard

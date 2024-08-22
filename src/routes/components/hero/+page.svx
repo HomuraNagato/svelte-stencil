@@ -1,0 +1,22 @@
+
+<script lang="ts">
+
+  import { language } from "$lib/stores/language.store.ts";
+
+  import CnPage from "./cn-page.svx";
+  import EnPage from "./en-page.svx";
+  import JpPage from "./jp-page.svx";
+  import KrPage from "./kr-page.svx";
+
+  const contents = {
+    "cn": CnPage,
+    "en": EnPage,
+    "jp": JpPage,
+    "kr": KrPage
+  }
+
+  $: content = contents[$language.label];
+  
+</script>
+
+<svelte:component this={content} />

@@ -1,0 +1,14 @@
+
+---
+title: 欢迎!
+date: 2024-08-19
+summary: welcome
+---
+
+# {title}
+
+ - 包含 tailwindcss、daisyui 和 smui 组件的基本页面；以及用于 svelte 页面旁边的 mdsvex 的 md 页面
+ - <p class="underline text-green-700 md:text-red-700">尺寸依赖 tailwindcss 颜色；增加/减少此页面的尺寸以查看效果</p>
+ - <p class="text-caffe-purple">语言存储使文本动态地适应所选语言</p>
+ - daisyui 主题
+ - 辅助功能：通过键盘导航

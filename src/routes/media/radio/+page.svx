@@ -1,0 +1,40 @@
+
+---
+date: 2024-08-21
+---
+
+<script lang="ts">
+
+  import { default_langs } from "$lib/components/langs/lang_default_dict.ts";
+  import Radio from "$lib/components/media/radio/player.svelte";
+  import { language } from "$lib/stores/language.store.ts";
+
+  import type { Audio } from "$lib/types/media";
+  
+  $: title_map = default_langs("收音机", "radio", "ラジオ", "라디오");
+
+  const listen_moe_stream: Audio = { src: "https://listen.moe/stream?_ic2=1724339856243",
+                                     type: "audio/ogg" };
+  const listen_moe_fallback: Audio = { src: "https://listen.moe/fallback?_ic2=1724339893414",
+                                       type: "audio/mpeg" };
+  const arirang_stream: Audio = { src: "http://amdlive.ctnd.com.edgesuite.net/arirang_3ch/smil:arirang_3ch.smil/playlist.m3u8",
+                                  type: "audio/mpeg" };
+
+</script>
+
+# {title_map[$language.label]}
+
+<div class="grid grid-cols-1 gap-4">
+
+  <Radio title="listen.moe"
+         stream={listen_moe_stream}
+         fallback={listen_moe_fallback} >
+    <a href="https://listen.moe">https://listen.moe</a>
+  </Radio>
+
+  <Radio title="arirang"
+         stream={arirang_stream} >
+    <a href="https://www.arirang.com/radio?lang=ko">https://www.arirang.com/radio?lang=ko</a>
+  </Radio>
+
+</div>

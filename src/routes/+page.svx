@@ -1,0 +1,55 @@
+
+---
+date: 2024-05-20
+---
+
+<script lang="ts">
+
+  import ThemeDropdown from "$lib/components/themes/theme-dropdown.svelte";
+
+  import { default_langs } from "$lib/components/langs/lang_default_dict.ts";
+  import { language } from "$lib/stores/language.store.ts";
+  import type { Languages } from "$lib/types/language";
+
+  import CnPage from "./cn-page.svx";
+  import EnPage from "./en-page.svx";
+  import JpPage from "./jp-page.svx";
+  import KrPage from "./kr-page.svx";
+
+  const contents = {
+    "cn": CnPage,
+    "en": EnPage,
+    "jp": JpPage,
+    "kr": KrPage
+  }
+
+  $: content = contents[$language.label];
+  
+  let mode_map: Languages = default_langs("明暗模式", "light / dark mode", "ライト/ダークモード", "밝음/어둠 모드");
+  let code_map: Languages = default_langs("略码", "code", "コード", "규약"); 
+
+</script>
+
+<svelte:component this={content} />
+
+# {mode_map[$language.label]}
+
+<ThemeDropdown>
+</ThemeDropdown>
+
+# {code_map[$language.label]}
+
+```python
+def fibonacci(limit):
+    a, b = 0, 1
+    fib_sequence = []
+    while a < limit:
+        fib_sequence.append(a)
+        a, b = b, a + b
+    return fib_sequence
+
+# Example usage
+limit = 100
+fib_sequence = fibonacci(limit)
+print(fib_sequence)
+```

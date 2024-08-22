@@ -1,0 +1,22 @@
+
+---
+title: 欢迎
+date: 2024-05-20
+---
+
+<script lang="ts">
+  
+  import HeroOverlay from "$lib/components/hero/hero-overlay.svelte";
+  
+  let image = "/images/cafe-dining/caffe-idols-paris.png";
+  let text = "请享受您的住宿";
+  let button_text = "家";
+  let button_url = "/";
+  
+</script>
+
+# {title}
+
+<HeroOverlay title={title} image={image} text={text} button_text={button_text}
+             button_url={button_url}>
+</HeroOverlay>

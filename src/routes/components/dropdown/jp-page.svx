@@ -1,0 +1,25 @@
+
+---
+title: ドロップダウンコンポーネント
+summary: ドロップダウンコンポーネント
+date: 2024-05-20
+---
+
+<script lang="ts">
+  
+  import DropdownSkeleton from "./dropdown-skeleton.svelte"
+  import DropdownSmui from "./dropdown-smui.svelte"
+  
+  let clicked = "ドロップダウン項目をタッチ/クリックしてください";
+
+</script>
+
+# {title}
+
+<DropdownSkeleton bind:clicked={clicked}>
+</DropdownSkeleton>
+
+<DropdownSmui bind:clicked={clicked}>
+</DropdownSmui>
+
+<pre class="status">クリックした: {clicked}</pre>

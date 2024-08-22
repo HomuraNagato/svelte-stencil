@@ -1,0 +1,25 @@
+
+---
+title: 下拉按钮
+summary: 下拉按钮
+date: 2024-05-20
+---
+
+<script lang="ts">
+  
+  import DropdownSkeleton from "./dropdown-skeleton.svelte"
+  import DropdownSmui from "./dropdown-smui.svelte"
+  
+  let clicked = "请触摸/单击下拉项";
+
+</script>
+
+# {title}
+
+<DropdownSkeleton bind:clicked={clicked}>
+</DropdownSkeleton>
+
+<DropdownSmui bind:clicked={clicked}>
+</DropdownSmui>
+
+<pre class="status">点击: {clicked}</pre>

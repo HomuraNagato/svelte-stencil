@@ -1,0 +1,8 @@
+
+# libraries and loaded packages
+node_modules
+.svelte-kit
+package-lock.json
+
+# emacs tmp files
+*~

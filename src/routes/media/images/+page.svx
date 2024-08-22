@@ -1,0 +1,40 @@
+
+---
+date: 2024-08-21
+---
+
+<script lang="ts">
+
+  import { default_langs } from "$lib/components/langs/lang_default_dict.ts";
+  import { language } from "$lib/stores/language.store.ts";
+
+  import type { Image } from "$lib/types/media";
+  
+  const pdir = "/images/covers/";
+
+  const boa: Image = { src: "Boa in black background.jpg", name: "BoA" };
+  const blackpink: Image = { src: "blackpink cover smiling.jpg", name: "BlackPink" };
+  const kana_nishino: Image = { src: "kana-nishino-love-collection-pink1.jpg",
+                                name: "Kana Nishino" };
+  const cute: Image = { src: "C-ute 1.jpg", name: "C-ute" };
+  const namie_amuro: Image = { src: "Namie Amuro cover clean.jpeg", name: "Namie Amuro" };
+  const reina: Image = { src: "Reina AKB 48 cover.jpg", name: "Reina (AKB 48)" };
+  const tara: Image = { src: "T-ara cry cry cover.jpg", name: "T-ara" };
+  const suzy: Image = { src: "suzy maiden cover.jpg", name: "Suzy (Miss A)" };
+  const images = [ boa, blackpink, cute, kana_nishino,
+                   namie_amuro, reina, tara, suzy ];
+  
+  $: title_map = default_langs("图像", "image", "画像", "심상");
+
+</script>
+
+# {title_map[$language.label]}
+
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+  {#each images as img}
+    <div>
+      <h4>{img.name}</h4>
+      <img src={pdir + img.src} alt={img.name} class="object-contain"/>
+    </div>
+  {/each}
+</div>

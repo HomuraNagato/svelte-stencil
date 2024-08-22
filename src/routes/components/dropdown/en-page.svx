@@ -1,0 +1,25 @@
+
+---
+title: dropdown items
+summary: dropdown items
+date: 2024-05-20
+---
+
+<script lang="ts">
+  
+  import DropdownSkeleton from "./dropdown-skeleton.svelte"
+  import DropdownSmui from "./dropdown-smui.svelte"
+  
+  let clicked = "please touch/click a dropdown item";
+
+</script>
+
+# {title}
+
+<DropdownSkeleton bind:clicked={clicked}>
+</DropdownSkeleton>
+
+<DropdownSmui bind:clicked={clicked}>
+</DropdownSmui>
+
+<pre class="status">clicked: {clicked}</pre>

@@ -1,0 +1,16 @@
+
+---
+title: 视频
+date: 2021-06-07
+---
+
+<script lang="ts">
+
+  import WVideo from "$lib/components/media/video/widescreen.svelte";
+  
+</script>
+
+# {title}
+
+<WVideo src="https://www.youtube.com/embed/N5dr6lNP5ec?si=ivYnRLnj_AMnVWHy">
+</WVideo>

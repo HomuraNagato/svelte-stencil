@@ -1,0 +1,14 @@
+
+---
+title: 환영!
+date: 2024-08-19
+summary: welcome
+---
+
+# {title}
+
+ - tailwindcss, daisyui 및 smui 구성 요소가 있는 기본 페이지; svelte 페이지 옆에 있는 md 페이지를 위한 mdsvex와 함께
+ - <p class="underline text-green-700 md:text-red-700">크기에 따라 tailwindcss 색상이 달라집니다. 효과를 보려면 이 페이지의 크기를 늘리거나 줄이세요.</p>
+ - <p class="text-caffe-purple">언어 저장소는 선택한 언어에 따라 텍스트를 동적으로 만듭니다.</p>
+ - 테마를 위한 daisyui
+ - 접근성 기능: 키보드로 탐색

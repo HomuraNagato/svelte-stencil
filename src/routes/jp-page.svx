@@ -1,0 +1,14 @@
+
+---
+title: いらっしゃいませ!
+date: 2024-08-19
+summary: welcome
+---
+
+# {title}
+
+ - tailwindcss、daisyui、smui コンポーネントを使用した基本ページ。svelte ページの横にある md ページ用の mdsvex も使用できます。
+ - <p class="underline text-green-700 md:text-red-700">サイズに依存するtailwindcssカラー。効果を確認するにはこのページのサイズを拡大/縮小してください。</p>
+ - <p class="text-caffe-purple">言語ストアはテキストを選択した言語に合わせて動的に変更します</p>
+ - テーマ別ダイシュイ
+ - アクセシビリティ機能: キーボードによるナビゲーション

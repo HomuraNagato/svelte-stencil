@@ -1,0 +1,28 @@
+
+---
+title: video
+date: 2021-06-07
+---
+
+<script lang="ts">
+
+  import WVideo from "$lib/components/media/video/widescreen.svelte";
+  import { language } from "$lib/stores/language.store.ts";
+  
+  import CnPage from "./cn-page.svx";
+  import EnPage from "./en-page.svx";
+  import JpPage from "./jp-page.svx";
+  import KrPage from "./kr-page.svx";
+
+  const contents = {
+    "cn": CnPage,
+    "en": EnPage,
+    "jp": JpPage,
+    "kr": KrPage
+  }
+
+  $: content = contents[$language.label];
+  
+</script>
+
+<svelte:component this={content} />
